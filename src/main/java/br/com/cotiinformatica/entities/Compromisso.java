@@ -1,6 +1,6 @@
 package br.com.cotiinformatica.entities;
 
-import java.util.List;
+import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,13 +11,16 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Usuario {
-
-	private Integer idUsuario;
+public class Compromisso {
+	private Integer idCompromisso;
 	private String nome;
-	private String email;
-	private String senha;
-
-	private List<Compromisso> compromissos;
+	private Date data;
+	private String hora;
+	private String descricao;
+	private Integer prioridade;
 	
+	//Relacionamento
+	private Usuario usuario;
+	
+
 }
